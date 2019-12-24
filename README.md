@@ -14,17 +14,14 @@ Esse projeto deve criar uma interface que permita o manuseio e edição de regra
 
 # Especificações
 
-- uuid neste contexto (uma string única, mas modificável. Tipo os handlers to twitter, para marcar alguém)
 - Os modelos utilizados aqui são:
-  -- Usuário
-  --- id, nome, sobrenome, uuid, avatar_url, tipo
-  -- Time
-  --- id, uuid, coach_id
-  -- TeamPlayers (a ligação entre um jogador e um time)
-  --- id, team_id, player_id
-  -- TeamCoaches (a ligação entre um time e um treinador)
-  -- Policies (as regras)
-  --- id, state, league, rules (um array de strings é suficiente por enquanto)
+    - **Usuário**: id, nome, sobrenome, uuid, avatar_url, tipo
+    - **Time**: id, uuid, coach_id
+    - **TeamPlayers** (a ligação entre um jogador e um time): id, team_id, player_id
+    - **TeamCoaches** (a ligação entre um time e um treinador): id, team_id, coach_id
+    - **Policies** (as regras): id, state, league, rules (um array de strings é suficiente por enquanto)
+
+- uuid neste contexto (uma string única, mas modificável. Tipo os handlers to twitter, para marcar alguém)
 - As sessões que ligam um team a uma policy podem ser eliminadas do design e da lógica
 
 # Sugestões
